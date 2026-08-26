@@ -1,0 +1,53 @@
+:root {
+  --pink: #e27396;
+  --light-pink: #ea9ab2;
+  --green: #337357;
+  --sage: #719f76;
+  --cream: #e4e3d3;
+}
+
+/* ================= GENERAL ================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--green);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  background-color: var(--green);
+  padding: 18px 0;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.logo:hover {
+  color: var(--light-pink);
+}
+
+.help-btn {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.help-btn:hover {
+  background-color: white;
+  color: var(--green);
+}
