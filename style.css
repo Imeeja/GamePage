@@ -190,3 +190,62 @@ body {
 
   transform: scale(1.02);
 }
+
+/* ================= FOOTER ================= */
+
+footer {
+  background-color: var(--green);
+
+  color: white;
+
+  text-align: center;
+
+  padding: 12px 0;
+
+  font-size: 0.8rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ================= HELP MODAL ================= */
+
+.help-modal {
+  border: none;
+  border-radius: 25px;
+  background-color: var(--cream);
+}
+
+.help-modal .modal-header {
+  background-color: var(--green);
+  color: white;
+}
+
+.help-item {
+  display: flex;
+  gap: 15px;
+
+  align-items: flex-start;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  background-color: white;
+
+  border-radius: 15px;
+
+  font-size: 1.5rem;
+}
+
+.help-item strong {
+  color: var(--green);
+  font-size: 1rem;
+}
+
+.help-item p {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 4px 0 0;
+}
