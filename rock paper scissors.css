@@ -68,3 +68,49 @@ body {
 
     text-align: center;
 }
+
+
+/* =========================
+   TITLE
+========================= */
+
+.game-label {
+    display: inline-block;
+
+    padding: 6px 15px;
+
+    margin-bottom: 8px;
+
+    border-radius: 50px;
+
+    background: rgba(234,154,179,0.1);
+
+    border: 1px solid rgba(234,154,179,0.2);
+
+    color: #E27296;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+h1 {
+    font-size: 42px;
+
+    margin-bottom: 7px;
+
+    background:
+        linear-gradient(
+            90deg,
+              90deg,
+            #337358,
+            #6E9F70,
+            #E27296
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
