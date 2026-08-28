@@ -872,3 +872,42 @@ h1 {
         padding: 10px 22px;
     }
 }
+
+/* =================================================
+   VERY SMALL MOBILE
+================================================= */
+
+@media (max-width: 380px) {
+
+    .game {
+        padding: 13px 5px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .player-card {
+        min-height: 195px;
+    }
+
+    .choice-display {
+        width: 68px;
+        height: 68px;
+
+        font-size: 35px;
+    }
+
+    .choice {
+        width: 75px;
+        height: 78px;
+    }
+
+    .choice .emoji {
+        font-size: 27px;
+    }
+
+    .choice span {
+        font-size: 7px;
+    }
+}
