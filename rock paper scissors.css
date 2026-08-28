@@ -3,3 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at top left,
+                #EA9AB355,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+             #EA9AB355,
+            transparent 35%
+        ),
+        linear-gradient(
+               135deg,
+            #E4E2D3,
+            #E4E2D3,
+          
+            #33735782
+           
+        );
+}
+
