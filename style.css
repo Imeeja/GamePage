@@ -419,3 +419,187 @@ footer p {
     margin-bottom: 5px;
   }
 }
+
+
+
+/* start TIC TAC TOE game */
+.ttt-body-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.game-header {
+  background-color: var(--green);
+  padding: 30px 0;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.header-title {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.header-btn {
+  background-color: white;
+  color: var(--green);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.header-btn:hover {
+  background-color: var(--light-pink);
+  color: var(--green);
+  transform: scale(1.03);
+}
+
+.nav-link-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.game-body-section {
+  background-color: var(--cream);
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.game-play-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.game-center-box {
+  background-color: white;
+  color: var(--green);
+  border: 4px solid var(--pink);
+  border-radius: 20px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  padding: 12px 35px;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(51, 115, 87, 0.08);
+  white-space: nowrap;
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.ttt-cell {
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  border: 3px solid var(--pink);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(51, 115, 87, 0.06);
+  transition: all 0.2s ease;
+}
+
+.ttt-cell:hover, .ttt-cell:active {
+  background-color: var(--light-pink);
+  border-color: var(--pink);
+  color: var(--green);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(226, 115, 150, 0.2);
+}
+
+@media (max-width: 576px) {
+  .game-header {
+    padding: 15px 0;
+  }
+  
+  .header-container {
+    padding: 0 15px;
+    gap: 5px;
+  }
+
+  .header-title {
+    font-size: 1.2rem;
+  }
+  
+  .header-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    border-radius: 8px;
+  }
+  
+  .game-play-container {
+    gap: 20px;
+  }
+
+  .game-center-box {
+    font-size: 1.5rem;
+    padding: 8px 25px;
+    min-width: 130px;
+    border-radius: 15px;
+  }
+
+  .ttt-board {
+    gap: 10px;
+    max-width: 270px;
+  }
+  
+  .ttt-cell {
+    border-radius: 15px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-title {
+    font-size: 1rem;
+  }
+  .header-btn {
+    padding: 5px 8px;
+    font-size: 0.7rem;
+  }
+  .ttt-board {
+    max-width: 240px;
+  }
+}
+
+/* END TIC TAC TOE game */
