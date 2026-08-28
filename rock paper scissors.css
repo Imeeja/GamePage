@@ -174,3 +174,176 @@ h1 {
 
     gap: 15px;
 }
+
+
+/* =========================
+   PLAYER CARD
+========================= */
+.player-card {
+    min-height: 275px;
+
+    padding: 20px 15px;
+
+    background:
+        rgba(234, 154, 179, 0.22);
+
+    border:
+        1px solid rgba(54, 186, 155, 0.35);
+
+    border-radius: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: 0.35s;
+}
+.player-card:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(234, 154, 179, 0.32);
+}
+
+
+/* =========================
+   PLAYER TITLE
+========================= */
+
+.player-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 13px;
+}
+
+
+.player-title .icon {
+    font-size: 25px;
+}
+
+
+.player-title h2 {
+    font-size: 16px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   CHOICE DISPLAY
+========================= */
+
+.choice-display {
+    width: 115px;
+    height: 115px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    background:
+        rgba(0,0,0,0.2);
+
+    border-radius: 25px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        inset 0 0 30px rgba(255,255,255,0.04),
+        0 15px 40px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
+}
+
+
+.choice-name {
+    margin-top: 10px;
+
+    color: #337358;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   SCORE
+========================= */
+
+.score-title {
+    margin-top: 12px;
+
+    color: #6E9F70;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+.score {
+    margin-top: 3px;
+
+    font-size: 34px;
+
+    font-weight: bold;
+
+    color: #E27296;
+}
+
+
+/* =========================
+   VS
+========================= */
+
+.middle {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.vs {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(234,154,179,0.08);
+
+    border:
+        1px solid rgba(234,154,179,0.2);
+
+    color: #E27296;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 20px #E2729666;
+}
