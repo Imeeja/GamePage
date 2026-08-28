@@ -1,0 +1,913 @@
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at top left,
+                #EA9AB355,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+             #EA9AB355,
+            transparent 35%
+        ),
+        linear-gradient(
+               135deg,
+            #E4E2D3,
+            #E4E2D3,
+          
+            #33735782
+           
+        );
+}
+
+
+/* =========================
+   GAME CONTAINER
+========================= */
+
+.game {
+    width: 100%;
+    max-width: 1050px;
+
+    padding: 25px 30px;
+
+      background: rgba(255, 255, 255, 0.45);
+
+      border: 1px solid rgba(51, 115, 88, 0.18);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+            0 30px 80px rgba(51, 115, 88, 0.20);
+
+    text-align: center;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.game-label {
+    display: inline-block;
+
+    padding: 6px 15px;
+
+    margin-bottom: 8px;
+
+    border-radius: 50px;
+
+    background: rgba(234,154,179,0.1);
+
+    border: 1px solid rgba(234,154,179,0.2);
+
+    color: #E27296;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+h1 {
+    font-size: 42px;
+
+    margin-bottom: 7px;
+
+    background:
+        linear-gradient(
+            90deg,
+              90deg,
+            #337358,
+            #6E9F70,
+            #E27296
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+       color: #337358;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   ROUND
+========================= */
+
+.round-box {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 6px 16px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50px;
+
+    background:
+                rgba(255, 255, 255, 0.40);
+
+    border:
+               1px solid rgba(51, 115, 88, 0.16);
+
+    color: #337358;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.round-number {
+    color: #E27296;
+}
+
+
+/* =========================
+   BATTLE
+========================= */
+
+.battle {
+    display: grid;
+
+    grid-template-columns:
+        1fr 80px 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* =========================
+   PLAYER CARD
+========================= */
+.player-card {
+    min-height: 275px;
+
+    padding: 20px 15px;
+
+    background:
+        rgba(234, 154, 179, 0.22);
+
+    border:
+        1px solid rgba(54, 186, 155, 0.35);
+
+    border-radius: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: 0.35s;
+}
+.player-card:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(234, 154, 179, 0.32);
+}
+
+
+/* =========================
+   PLAYER TITLE
+========================= */
+
+.player-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 13px;
+}
+
+
+.player-title .icon {
+    font-size: 25px;
+}
+
+
+.player-title h2 {
+    font-size: 16px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   CHOICE DISPLAY
+========================= */
+
+.choice-display {
+    width: 115px;
+    height: 115px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    background:
+        rgba(0,0,0,0.2);
+
+    border-radius: 25px;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        inset 0 0 30px rgba(255,255,255,0.04),
+        0 15px 40px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
+}
+
+
+.choice-name {
+    margin-top: 10px;
+
+    color: #337358;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   SCORE
+========================= */
+
+.score-title {
+    margin-top: 12px;
+
+    color: #6E9F70;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+.score {
+    margin-top: 3px;
+
+    font-size: 34px;
+
+    font-weight: bold;
+
+    color: #E27296;
+}
+
+
+/* =========================
+   VS
+========================= */
+
+.middle {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.vs {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(234,154,179,0.08);
+
+    border:
+        1px solid rgba(234,154,179,0.2);
+
+    color: #E27296;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 20px #E2729666;
+}
+
+
+/* =========================
+   THINKING
+========================= */
+
+.thinking {
+    font-size: 11px;
+
+    color: #E27296;
+
+    letter-spacing: 1px;
+
+    font-weight: bold;
+
+    animation:
+        thinking 1s infinite;
+}
+
+
+@keyframes thinking {
+
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 12px 0 5px;
+}
+
+
+#result {
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+.win-text {
+    color: #6E9F70;
+
+    text-shadow:
+        0 0 15px rgba(110,159,112,0.3);
+}
+
+
+.lose-text {
+    color: #E27296;
+
+    text-shadow:
+        0 0 15px rgba(226,114,150,0.3);
+}
+
+
+.draw-text {
+    color: #EA9AB3;
+
+    text-shadow:
+        0 0 15px rgba(234,154,179,0.25);
+}
+
+
+/* =========================
+   CHOOSE
+========================= */
+
+.choose-title {
+    margin: 5px 0 10px;
+
+    color: #bfc3d9;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CHOICES
+========================= */
+
+.choices {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.choice {
+    width: 125px;
+    height: 110px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid rgba(255,255,255,0.15);
+
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    transition:
+        transform 0.3s,
+        background 0.3s,
+        box-shadow 0.3s;
+}
+
+
+.choice .emoji {
+    font-size: 45px;
+
+    line-height: 1;
+}
+
+
+.choice span {
+    font-size: 12px;
+
+    color: #337358;
+
+    font-weight: bold;
+}
+
+
+.choice:hover {
+    transform:
+        translateY(-7px)
+        scale(1.04);
+
+    background:
+        rgba(255,255,255,0.14);
+
+    box-shadow:
+        0 15px 35px
+        rgba(226,114,150,0.2);
+}
+
+
+.choice:active {
+    transform: scale(0.94);
+}
+
+
+.choice:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+.reset {
+    margin-top: 15px;
+
+    padding: 10px 25px;
+
+    border: none;
+
+    border-radius: 50px;
+
+   background-color: #337358;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.25);
+}
+
+
+.reset:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(226,114,150,0.25);
+}
+
+
+.reset:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+.shake {
+    animation:
+        shake 0.5s ease;
+}
+
+
+@keyframes shake {
+
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-8deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+
+.winner {
+    animation:
+        winner 0.7s ease;
+
+    border-color:
+        rgba(110,159,112,0.45);
+}
+
+
+@keyframes winner {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =================================================
+   LAPTOP
+================================================= */
+
+@media (min-width: 801px) and (max-height: 800px) {
+
+    .game {
+        transform: scale(0.88);
+        transform-origin: center center;
+    }
+
+}
+
+
+
+
+@media (min-width: 801px) and (max-height: 700px) {
+
+    .game {
+        transform: scale(0.80);
+        transform-origin: center center;
+    }
+
+}
+
+
+/* =================================================
+   TABLET
+================================================= */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .game {
+        padding: 20px 12px;
+
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .battle {
+        grid-template-columns:
+            1fr 50px 1fr;
+
+        gap: 8px;
+    }
+
+    .player-card {
+        min-height: 250px;
+
+        padding: 17px 8px;
+    }
+
+    .choice-display {
+        width: 100px;
+        height: 100px;
+
+        font-size: 55px;
+    }
+
+    .player-title h2 {
+        font-size: 13px;
+    }
+
+    .player-title .icon {
+        font-size: 22px;
+    }
+
+    .score {
+        font-size: 30px;
+    }
+
+    .vs {
+        width: 45px;
+        height: 45px;
+
+        font-size: 14px;
+    }
+
+    #result {
+        font-size: 19px;
+    }
+
+    .choices {
+        gap: 8px;
+    }
+
+    .choice {
+        width: 100px;
+        height: 105px;
+
+        border-radius: 18px;
+    }
+
+    .choice .emoji {
+        font-size: 40px;
+    }
+
+    .choice span {
+        font-size: 10px;
+    }
+}
+
+
+/* =================================================
+   MOBILE
+ 
+================================================= */
+@media (max-width: 500px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .game {
+        width: 100%;
+        padding: 22px 12px;
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        margin-bottom: 18px;
+    }
+
+    .round-box {
+        margin-bottom: 18px;
+    }
+
+    /* Battle */
+    .battle {
+        grid-template-columns: minmax(0, 1fr) 45px minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    /* Cards */
+    .player-card {
+        min-width: 0;
+        min-height: 250px;
+        padding: 18px 8px;
+        border-radius: 20px;
+    }
+
+    .player-title {
+        margin-bottom: 14px;
+    }
+
+    .player-title .icon {
+        font-size: 21px;
+    }
+
+    .player-title h2 {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    /* Choice */
+    .choice-display {
+        width: 92px;
+        height: 92px;
+        font-size: 48px;
+        border-radius: 20px;
+    }
+
+    .choice-name {
+        margin-top: 10px;
+        font-size: 9px;
+    }
+
+    .score-title {
+        margin-top: 10px;
+    }
+
+    .score {
+        font-size: 28px;
+    }
+
+    /* VS */
+    .vs {
+        width: 42px;
+        height: 42px;
+        font-size: 12px;
+    }
+
+    /* Result */
+    .result {
+        min-height: 48px;
+        margin: 15px 0 5px;
+    }
+
+    #result {
+        font-size: 17px;
+    }
+
+    /* Buttons */
+    .choices {
+        gap: 8px;
+    }
+
+    .choice {
+        flex: 1;
+        width: auto;
+        max-width: 105px;
+        height: 105px;
+        border-radius: 18px;
+    }
+
+    .choice .emoji {
+        font-size: 38px;
+    }
+
+    .choice span {
+        font-size: 9px;
+    }
+
+    .reset {
+        margin-top: 15px;
+        padding: 10px 22px;
+    }
+}
+
+/* =================================================
+   VERY SMALL MOBILE
+================================================= */
+
+@media (max-width: 380px) {
+
+    .game {
+        padding: 13px 5px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .player-card {
+        min-height: 195px;
+    }
+
+    .choice-display {
+        width: 68px;
+        height: 68px;
+
+        font-size: 35px;
+    }
+
+    .choice {
+        width: 75px;
+        height: 78px;
+    }
+
+    .choice .emoji {
+        font-size: 27px;
+    }
+
+    .choice span {
+        font-size: 7px;
+    }
+}
