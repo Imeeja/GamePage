@@ -33,3 +33,19 @@ function computerChoose() {
 
     return choices[randomNumber];
 }
+
+// Function to show emoji
+function getEmoji(choice) {
+
+    if (choice === "rock") {
+        return "✊";
+    }
+
+    if (choice === "paper") {
+        return "📄";
+    }
+
+    if (choice === "scissors") {
+        return "✂️";
+    }
+}
