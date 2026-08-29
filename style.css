@@ -122,7 +122,13 @@ body {
 .rps-card {
   border-color: var(--sage);
 }
+.pig-card {
+  border-color: var(--sage);
+}
 
+.memory-card {
+  border-color: var(--light-pink);
+}
 .ttt-card {
   border-color: var(--pink);
 }
