@@ -172,3 +172,57 @@ function minimax(board, depth, isMaximizing) {
     return bestScore;
   }
 }
+// ==============================
+// CHECK WINNER FOR MINIMAX
+// ==============================
+
+function checkMinimaxWinner(board) {
+  for (const condition of winConditions) {
+    const [a, b, c] = condition;
+
+    if (board[a] !== "" && board[a] === board[b] && board[a] === board[c]) {
+      return board[a];
+    }
+  }
+
+  if (!board.includes("")) {
+    return "draw";
+  }
+
+  return null;
+}
+
+// ==============================
+// CHECK REAL GAME WINNER
+// ==============================
+
+function checkWinner() {
+  const result = checkMinimaxWinner(options);
+
+  if (result === null) {
+    changePlayer();
+
+    return;
+  }
+
+  // Human wins
+  if (result === human) {
+    statusText.textContent = "🎉 You Win!";
+
+    running = false;
+  }
+
+  //Computer wins
+  else if (result === computer) {
+    statusText.textContent = "🤖 Computer Wins!";
+
+    running = false;
+  }
+
+  // Draw
+  else if (result === "draw") {
+    statusText.textContent = "🤝 It's a Draw!";
+
+    running = false;
+  }
+}
