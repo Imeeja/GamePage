@@ -16,3 +16,11 @@ let result = document.getElementById("result");
 let round = document.getElementById("round");
 
 let reset = document.getElementById("reset");
+
+
+
+let playerPoints = 0;
+let computerPoints = 0;
+let currentRound = 1;
+
+let choices = ["rock", "paper", "scissors"];
