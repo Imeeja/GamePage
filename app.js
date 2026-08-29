@@ -6,10 +6,21 @@ const nameError = document.querySelector("#nameError");
 const welcomeMessage = document.querySelector("#welcomeMessage");
 
 // Show name modal when page loads
-window.addEventListener("load", () => {
-  nameModal.show();
+// window.addEventListener("load", () => {
+//   nameModal.show();
 
-  playerName.focus();
+//   playerName.focus();
+// });
+//  Show name modal when page loads
+window.addEventListener("load", () => {
+  const savedName = localStorage.getItem("playerName");
+
+  if (!savedName) {
+    nameModal.show();
+    playerName.focus();
+  } else {
+    welcomeMessage.textContent = `Welcome, ${savedName}! 👋`;
+  }
 });
 
 // Start button
@@ -23,6 +34,7 @@ startGameBtn.addEventListener("click", () => {
 
     return;
   }
+  localStorage.setItem("playerName", name);
 
   nameError.style.display = "none";
 

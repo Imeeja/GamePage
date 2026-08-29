@@ -1,6 +1,7 @@
 const cells = document.querySelectorAll(".ttt-cell");
 const statusText = document.querySelector("#status");
 const resetBtn = document.querySelector("#resetBtn");
+const playerName = localStorage.getItem("playerName") || "Player";
 
 const human = "X";
 const computer = "O";
@@ -34,7 +35,7 @@ function initializeGame() {
 
   resetBtn.addEventListener("click", restartGame);
 
-  statusText.textContent = "Your Turn (X)";
+  statusText.textContent = `${playerName}'s Turn`;
 
   running = true;
 }
@@ -81,7 +82,7 @@ function changePlayer() {
   currentPlayer = currentPlayer === human ? computer : human;
 
   if (currentPlayer === human) {
-    statusText.textContent = "Your Turn (X)";
+    statusText.textContent = `${playerName}'s Turn`;
   }
 }
 function computerMove() {
@@ -239,7 +240,7 @@ function restartGame() {
     cell.textContent = "";
   });
 
-  statusText.textContent = "Your Turn (X)";
+  statusText.textContent = `${playerName}'s Turn`;
 
   running = true;
 }

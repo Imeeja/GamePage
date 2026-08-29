@@ -1,15 +1,15 @@
-'use strict';
-const score0 = document.querySelector('#score--0');
-const score1 = document.querySelector('#score--1');
-const btnNew = document.querySelector('.btn--new');
-const btnRoll = document.querySelector('.btn--roll');
-const btnHold = document.querySelector('.btn--hold');
-const diceImg = document.querySelector('.dice');
-const current0 = document.querySelector('#current--0');
-const current1 = document.querySelector('#current--1');
+"use strict";
+const score0 = document.querySelector("#score--0");
+const score1 = document.querySelector("#score--1");
+const btnNew = document.querySelector(".btn--new");
+const btnRoll = document.querySelector(".btn--roll");
+const btnHold = document.querySelector(".btn--hold");
+const diceImg = document.querySelector(".dice");
+const current0 = document.querySelector("#current--0");
+const current1 = document.querySelector("#current--1");
 //appearance change
-const playerSect0 = document.querySelector('.player--0');
-const playerSect1 = document.querySelector('.player--1');
+const playerSect0 = document.querySelector(".player--0");
+const playerSect1 = document.querySelector(".player--1");
 let summedScore, activePlayer, score, playing;
 
 const init = function () {
@@ -20,28 +20,28 @@ const init = function () {
 
   score0.textContent = 0;
   score1.textContent = 0;
-  diceImg.classList.add('hidden');
+  diceImg.classList.add("hidden");
 
   current0.textContent = 0;
   current1.textContent = 0;
-  playerSect0.classList.add('player--active');
-  playerSect1.classList.remove('player--active');
-  playerSect1.classList.remove('player--winner');
-  playerSect0.classList.remove('player--winner');
+  playerSect0.classList.add("player--active");
+  playerSect1.classList.remove("player--active");
+  playerSect1.classList.remove("player--winner");
+  playerSect0.classList.remove("player--winner");
 };
 init();
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   summedScore = 0;
   activePlayer = activePlayer === 0 ? 1 : 0;
-  playerSect0.classList.toggle('player--active');
-  playerSect1.classList.toggle('player--active');
+  playerSect0.classList.toggle("player--active");
+  playerSect1.classList.toggle("player--active");
 };
 
-btnRoll.addEventListener('click', () => {
+btnRoll.addEventListener("click", () => {
   if (playing) {
     const diceNum = Math.trunc(Math.random() * 6) + 1;
-    diceImg.classList.remove('hidden');
+    diceImg.classList.remove("hidden");
     //   console.log(diceNum);
     diceImg.src = `dice-${diceNum}.png`;
     if (diceNum !== 1) {
@@ -55,7 +55,7 @@ btnRoll.addEventListener('click', () => {
   }
 });
 
-btnHold.addEventListener('click', () => {
+btnHold.addEventListener("click", () => {
   if (playing) {
     //add current score to the player score (score0, score1)
     score[activePlayer] += summedScore;
@@ -65,11 +65,11 @@ btnHold.addEventListener('click', () => {
     if (score[activePlayer] >= 100) {
       document
         .querySelector(`.player--${activePlayer}`)
-        .classList.add('player--winner');
+        .classList.add("player--winner");
       document
         .querySelector(`.player--${activePlayer}`)
-        .classList.remove('player--active');
-      diceImg.classList.add('hidden');
+        .classList.remove("player--active");
+      diceImg.classList.add("hidden");
 
       playing = false;
     }
@@ -78,4 +78,6 @@ btnHold.addEventListener('click', () => {
   }
 });
 
-btnNew.addEventListener('click', init);
+btnNew.addEventListener("click", init);
+document.querySelector(".player-name").textContent =
+  localStorage.getItem("playerName");
