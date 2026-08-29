@@ -84,3 +84,91 @@ function changePlayer() {
     statusText.textContent = "Your Turn (X)";
   }
 }
+function computerMove() {
+  if (!running) return;
+
+  let bestScore = -Infinity;
+  let bestMove;
+
+  for (let i = 0; i < options.length; i++) {
+    if (options[i] === "") {
+      options[i] = computer;
+
+      const score = minimax(options, 0, false);
+
+      options[i] = "";
+
+      if (score > bestScore) {
+        bestScore = score;
+
+        bestMove = i;
+      }
+    }
+  }
+
+  options[bestMove] = computer;
+
+  cells[bestMove].textContent = computer;
+
+  checkWinner();
+}
+// ==============================
+// MINIMAX ALGORITHM
+// ==============================
+
+function minimax(board, depth, isMaximizing) {
+  const result = checkMinimaxWinner(board);
+
+  // Computer wins
+  if (result === computer) {
+    return 10 - depth;
+  }
+
+  // Human wins
+  if (result === human) {
+    return depth - 10;
+  }
+
+  // Draw
+  if (result === "draw") {
+    return 0;
+  }
+
+  // COMPUTER'S TURN
+  if (isMaximizing) {
+    let bestScore = -Infinity;
+
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === "") {
+        board[i] = computer;
+
+        const score = minimax(board, depth + 1, false);
+
+        board[i] = "";
+
+        bestScore = Math.max(score, bestScore);
+      }
+    }
+
+    return bestScore;
+  }
+
+  // HUMAN'S TURN
+  else {
+    let bestScore = Infinity;
+
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] === "") {
+        board[i] = human;
+
+        const score = minimax(board, depth + 1, true);
+
+        board[i] = "";
+
+        bestScore = Math.min(score, bestScore);
+      }
+    }
+
+    return bestScore;
+  }
+}
