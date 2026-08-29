@@ -1,0 +1,55 @@
+/* #E27296 ِDark pink
+#EA9AB3 Light Pink
+#337358 Dark green
+#6E9F70 Light green
+#E4E2D3 Cream */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 20px;
+  background: linear-gradient(to right, #337358, #6e9f70);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.gamenest-btn {
+  color: #444;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  padding: 0.5rem 1.5rem;
+  border-radius: 50rem;
+
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.gamenest-btn:hover {
+  background-color: white;
+  color: #c7365f;
+  transform: translateY(-2px);
+}
+#board {
+  height: 532px;
+  width: 475px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  border: 6px solid #ea9ab3;
+}
+.card {
+  height: 128px;
+  width: 90px;
+  margin: 2.5px;
+}
+#winMessage {
+  color: #e27296;
+}
+.hidden {
+  display: none;
+}
