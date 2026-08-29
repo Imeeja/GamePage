@@ -134,3 +134,27 @@ function playGame(player) {
 
     }
 }
+
+
+
+// Button events
+
+rock.addEventListener("click", function () {
+
+    playGame("rock");
+
+});
+
+
+paper.addEventListener("click", function () {
+
+    playGame("paper");
+
+});
+
+
+scissors.addEventListener("click", function () {
+
+    playGame("scissors");
+
+});
