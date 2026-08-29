@@ -1,246 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock paper scissors</title>
-    <link rel="stylesheet" href="rock paper scissors.css">
-</head>
-<body>
+    <link rel="stylesheet" href="rock paper scissors.css" />
+  </head>
+  <body>
     <div class="game">
-         <!-- HEADER -->
+      <!-- HEADER -->
 
-        <div class="game-label">
-            ⚔️ BATTLE ARENA
+      <div class="game-label">⚔️ BATTLE ARENA</div>
+
+      <h1>Rock Paper Scissors</h1>
+
+      <p class="subtitle">Choose your weapon and defeat the computer!</p>
+      <!-- ROUND -->
+
+      <div class="round-box">
+        ROUND
+
+        <span class="round-number" id="round"> 1 </span>
+
+        / 5
+      </div>
+
+      <!-- BATTLE -->
+
+      <div class="battle">
+        <!-- YOU -->
+
+        <div class="player-card" id="player-card">
+          <div class="player-title">
+            <span class="icon"> 👤 </span>
+
+            <h2>YOU</h2>
+          </div>
+
+          <div class="choice-display" id="player-choice">❔</div>
+
+          <p class="choice-name" id="player-choice-name">WAITING</p>
+
+          <p class="score-title">SCORE</p>
+
+          <div class="score" id="player-score">0</div>
         </div>
 
+        <!-- VS -->
 
-        <h1>
-            Rock Paper Scissors
-        </h1>
-
-
-        <p class="subtitle">
-            Choose your weapon and defeat the computer!
-        </p>
-          <!-- ROUND -->
-
-        <div class="round-box">
-
-            ROUND
-
-            <span
-                class="round-number"
-                id="round"
-            >
-                1
-            </span>
-
-            / 5
-
+        <div class="middle">
+          <div class="vs">VS</div>
         </div>
 
-            <!-- BATTLE -->
+        <!-- COMPUTER -->
 
-        <div class="battle">
+        <div class="player-card" id="computer-card">
+          <div class="player-title">
+            <span class="icon"> 🤖 </span>
 
+            <h2>COMPUTER</h2>
+          </div>
 
-            <!-- YOU -->
+          <div class="choice-display" id="computer-choice">❔</div>
 
-            <div
-                class="player-card"
-                id="player-card"
-            >
+          <p class="choice-name" id="computer-choice-name">WAITING</p>
 
-                <div class="player-title">
+          <p class="score-title">SCORE</p>
 
-                    <span class="icon">
-                        👤
-                    </span>
-
-                    <h2>
-                        YOU
-                    </h2>
-
-                </div>
-
-
-                <div
-                    class="choice-display"
-                    id="player-choice"
-                >
-                    ❔
-                </div>
-
-
-                <p
-                    class="choice-name"
-                    id="player-choice-name"
-                >
-                    WAITING
-                </p>
-
-
-                <p class="score-title">
-                    SCORE
-                </p>
-
-
-                <div
-                    class="score"
-                    id="player-score"
-                >
-                    0
-                </div>
-
-            </div>
-
-
-            <!-- VS -->
-
-            <div class="middle">
-
-                <div class="vs">
-                    VS
-                </div>
-
-            </div>
-
-
-            <!-- COMPUTER -->
-
-            <div
-                class="player-card"
-                id="computer-card"
-            >
-
-                <div class="player-title">
-
-                    <span class="icon">
-                        🤖
-                    </span>
-
-                    <h2>
-                        COMPUTER
-                    </h2>
-
-                </div>
-
-
-                <div
-                    class="choice-display"
-                    id="computer-choice"
-                >
-                    ❔
-                </div>
-
-
-                <p
-                    class="choice-name"
-                    id="computer-choice-name"
-                >
-                    WAITING
-                </p>
-
-
-                <p class="score-title">
-                    SCORE
-                </p>
-
-
-                <div
-                    class="score"
-                    id="computer-score"
-                >
-                    0
-                </div>
-
-            </div>
-
+          <div class="score" id="computer-score">0</div>
         </div>
+      </div>
 
-            <!-- RESULT -->
+      <!-- RESULT -->
 
-        <div class="result">
+      <div class="result">
+        <h2 id="result">Choose your weapon 🎮</h2>
+      </div>
 
-            <h2 id="result">
-                Choose your weapon 🎮
-            </h2>
+      <!-- CHOOSE -->
 
-        </div>
+      <p class="choose-title">Choose your weapon</p>
+      <div class="choices">
+        <button class="choice" id="rock">
+          <div class="emoji">✊</div>
 
-
-             <!-- CHOOSE -->
-
-        <p class="choose-title">
-            Choose your weapon
-        </p>
-          <div class="choices">
-
-
-            <button
-                class="choice"
-                id="rock"
-            >
-
-                <div class="emoji">
-                    ✊
-                </div>
-
-                <span>
-                    ROCK
-                </span>
-
-            </button>
-
-
-            <button
-                class="choice"
-                id="paper"
-            >
-
-                <div class="emoji">
-                    📄
-                </div>
-
-                <span>
-                    PAPER
-                </span>
-
-            </button>
-
-
-            <button
-                class="choice"
-                id="scissors"
-            >
-
-                <div class="emoji">
-                    ✂️
-                </div>
-
-                <span>
-                    SCISSORS
-                </span>
-
-            </button>
-
-        </div>
-        
-        <!-- RESET -->
-
-        <button
-            class="reset"
-            id="reset"
-        >
-            🔄 Reset Game
+          <span> ROCK </span>
         </button>
 
+        <button class="choice" id="paper">
+          <div class="emoji">📄</div>
 
+          <span> PAPER </span>
+        </button>
+
+        <button class="choice" id="scissors">
+          <div class="emoji">✂️</div>
+
+          <span> SCISSORS </span>
+        </button>
+      </div>
+
+      <!-- RESET -->
+
+      <button class="reset" id="reset">🔄 Reset Game</button>
     </div>
 
-
-    
-
-</body>
+    <script src=""></script>
+  </body>
 </html>
