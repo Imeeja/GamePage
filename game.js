@@ -226,3 +226,20 @@ function checkWinner() {
     running = false;
   }
 }
+// ==============================
+// RESTART GAME
+// ==============================
+
+function restartGame() {
+  currentPlayer = human;
+
+  options = ["", "", "", "", "", "", "", "", ""];
+
+  cells.forEach((cell) => {
+    cell.textContent = "";
+  });
+
+  statusText.textContent = "Your Turn (X)";
+
+  running = true;
+}
