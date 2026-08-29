@@ -158,3 +158,28 @@ scissors.addEventListener("click", function () {
     playGame("scissors");
 
 });
+
+
+
+// Reset game
+
+reset.addEventListener("click", function () {
+
+    playerPoints = 0;
+    computerPoints = 0;
+    currentRound = 1;
+
+    playerScore.innerText = "0";
+    computerScore.innerText = "0";
+
+    round.innerText = "1";
+
+    playerChoice.innerText = "❔";
+    computerChoice.innerText = "❔";
+
+    playerChoiceName.innerText = "WAITING";
+    computerChoiceName.innerText = "WAITING";
+
+    result.innerText = "Choose your weapon 🎮";
+
+});
