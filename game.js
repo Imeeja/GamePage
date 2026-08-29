@@ -63,3 +63,24 @@ function cellClicked() {
     setTimeout(computerMove, 500);
   }
 }
+// ==============================
+// UPDATE CELL
+// ==============================
+
+function updateCell(cell, index) {
+  options[index] = currentPlayer;
+
+  cell.textContent = currentPlayer;
+}
+
+// ==============================
+// CHANGE PLAYER
+// ==============================
+
+function changePlayer() {
+  currentPlayer = currentPlayer === human ? computer : human;
+
+  if (currentPlayer === human) {
+    statusText.textContent = "Your Turn (X)";
+  }
+}
