@@ -49,3 +49,88 @@ function getEmoji(choice) {
         return "✂️";
     }
 }
+
+
+// Function to decide winner
+function playGame(player) {
+
+    // Check if game is finished
+    if (currentRound > 5) {
+        return;
+    }
+
+    let computer = computerChoose();
+
+    // Show choices
+    playerChoice.innerText = getEmoji(player);
+    computerChoice.innerText = getEmoji(computer);
+
+    playerChoiceName.innerText = player.toUpperCase();
+    computerChoiceName.innerText = computer.toUpperCase();
+
+
+    // Check winner
+
+    if (player === computer) {
+
+        result.innerText = "It's a Draw! 🤝";
+
+    }
+
+    else if (
+        (player === "rock" && computer === "scissors") ||
+        (player === "paper" && computer === "rock") ||
+        (player === "scissors" && computer === "paper")
+    ) {
+
+        playerPoints++;
+
+        playerScore.innerText = playerPoints;
+
+        result.innerText = "You Win! 🎉";
+
+    }
+
+    else {
+
+        computerPoints++;
+
+        computerScore.innerText = computerPoints;
+
+        result.innerText = "Computer Wins! 🤖";
+
+    }
+
+
+    // Move to next round
+    currentRound++;
+
+    if (currentRound <= 5) {
+
+        round.innerText = currentRound;
+
+    }
+
+    else {
+
+        // Game finished
+        if (playerPoints > computerPoints) {
+
+            result.innerText = "🏆 You Won the Game!";
+
+        }
+
+        else if (computerPoints > playerPoints) {
+
+            result.innerText = "🤖 Computer Won the Game!";
+
+        }
+
+        else {
+
+            result.innerText = "🤝 Game Draw!";
+
+        }
+
+    }
+}
