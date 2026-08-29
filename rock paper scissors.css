@@ -499,6 +499,41 @@ h1 {
   transform: scale(0.95);
 }
 
+
+.go-home {
+  margin-top: 15px;
+
+  padding: 10px 25px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background-color: #E27296;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.go-home:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 35px #E27296;
+}
+
+.go-home:active {
+  transform: scale(0.95);
+}
+
 /* =========================
    ANIMATION
 ========================= */
