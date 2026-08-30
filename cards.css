@@ -53,3 +53,68 @@ body {
 .hidden {
   display: none;
 }
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  .gamenest-btn {
+    font-size: 1rem;
+    padding: 0.45rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin: 20px 0;
+  }
+
+  #board {
+    width: 95vw;
+    height: auto;
+    max-width: 475px;
+    aspect-ratio: 475 / 532;
+
+    border-width: 4px;
+  }
+
+  .card {
+    width: calc((100% - 25px) / 5);
+    height: auto;
+    aspect-ratio: 90 / 128;
+    margin: 2px;
+  }
+
+  #winMessage {
+    font-size: 1.4rem;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    padding: 10px 5px;
+  }
+
+  .gamenest-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  #board {
+    width: 96vw;
+    border-width: 3px;
+  }
+
+  .card {
+    margin: 1.5px;
+  }
+
+  #winMessage {
+    font-size: 1.1rem;
+  }
+}
