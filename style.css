@@ -14,7 +14,8 @@
 
 body {
   margin: 0;
-  background: linear-gradient(to top, var(--cream), var(--sage), var(--cream));
+  background-image: url(assets/39757960_8725442.jpg);
+  background-size: cover;
   color: var(--green);
   font-family: Arial, Helvetica, sans-serif;
 }
