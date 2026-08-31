@@ -62,7 +62,8 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".number").textContent = "?";
   document.querySelector(".guess").value = "";
 
-  document.querySelector("main").style.backgroundColor = "#E4E3D3";
+  document.querySelector("main").style.backgroundImage =
+    "url('assets/guessbg.webp')";
   document.querySelector(".number").style.width = "15rem";
 });
 
