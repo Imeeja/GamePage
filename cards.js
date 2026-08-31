@@ -104,6 +104,7 @@ function update() {
     matchedCards += 2;
 
     if (matchedCards === rows * cols) {
+      document.querySelector("#winMessage").classList.remove("hidden");
       document.querySelector("#winMessage").innerText = "🎉 YOU WIN!";
       document.querySelector("#againBtn").classList.remove("hidden");
     }

@@ -5,14 +5,14 @@ const startGameBtn = document.querySelector("#startGameBtn");
 const nameError = document.querySelector("#nameError");
 const welcomeMessage = document.querySelector("#welcomeMessage");
 
-// Show name modal when page loads
+// // Show name modal when page loads
 // window.addEventListener("load", () => {
 //   nameModal.show();
 
 //   playerName.focus();
 // });
 //  Show name modal when page loads
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const savedName = localStorage.getItem("playerName");
 
   if (!savedName) {

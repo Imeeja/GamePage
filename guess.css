@@ -3,9 +3,8 @@
 :root {
   --pink: #e27396;
   --light-pink: #ea9ab2;
-  --green: #337357;
-  --sage: #719f76;
-  --cream: #e4e3d3;
+  --purple: #84418a;
+  --cream: #fcde9c;
 }
 
 * {
@@ -20,8 +19,10 @@ html {
 
 body {
   font-family: "Press Start 2P", sans-serif;
-  color: var(--green);
-  background-color: var(--cream);
+  color: var(--purple);
+
+  background-image: url(assets/guessbg.webp);
+  background-size: cover;
 }
 
 /* ================= LAYOUT ================= */
@@ -33,7 +34,7 @@ main {
   align-items: center;
   justify-content: space-around;
 
-  background-color: var(--cream);
+  /* background-color: var(--cream); */
 }
 
 .left {
@@ -74,7 +75,7 @@ header {
   min-height: 35vh;
   height: auto;
 
-  background-color: var(--green);
+  background-color: var(--purple);
   color: white;
 
   border-bottom: 7px solid var(--pink);
@@ -111,7 +112,7 @@ header {
   right: 2rem;
 
   font-size: 1.3rem;
-  color: var(--light-pink);
+  color: var(--cream);
 
   text-align: right;
 }
@@ -139,8 +140,8 @@ h1 {
 
   transform: translate(-50%, 50%);
 
-  background-color: var(--cream);
-  color: var(--green);
+  background-color: var(--pink);
+  color: var(--cream);
 
   font-size: clamp(3rem, 6vw, 5rem);
 
@@ -238,12 +239,12 @@ h1 {
 }
 
 .label-highscore {
-  color: var(--sage);
+  color: var(--purple);
 }
 
 .score,
 .highscore {
-  color: var(--pink);
+  color: var(--purple);
 }
 
 /* ================= RESPONSIVE ================= */

@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-
+:root {
+  --pink: #e27396;
+  --light-pink: #ea9ab2;
+  --purple: #84418a;
+  --cream: #fcde9c;
+}
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +21,12 @@ body {
   font-weight: 400;
   height: 100vh;
   color: #333;
-  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  background-image: linear-gradient(
+    to right,
+    var(--purple),
+    var(--pink),
+    var(--purple)
+  );
   background-attachment: fixed;
   background-repeat: no-repeat;
   display: flex;
@@ -44,7 +54,7 @@ main {
   right: 2rem;
 
   color: #444;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: var(--cream);
   backdrop-filter: blur(10px);
 
   text-decoration: none;
@@ -59,7 +69,7 @@ main {
 }
 
 .gamenest-btn:hover {
-  background-color: white;
+  background-color: var(--cream);
   color: #c7365f;
   transform: translateY(-2px);
 }
@@ -86,12 +96,12 @@ main {
 .score {
   font-size: 8rem;
   font-weight: 300;
-  color: #c7365f;
+  color: var(--purple);
   margin-bottom: auto;
 }
 
 .player--active {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #fcde9c77;
 }
 .player--active .name {
   font-weight: 700;
@@ -105,7 +115,7 @@ main {
 }
 
 .current {
-  background-color: #c7365f;
+  background-color: var(--purple);
   opacity: 0.8;
   border-radius: 9px;
   color: #fff;
@@ -131,7 +141,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: #444;
+  color: var(--purple);
   background: none;
   border: none;
   font-family: inherit;
@@ -141,8 +151,8 @@ main {
   font-weight: 400;
   transition: all 0.2s;
 
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: var(--cream);
+  /* background-color: rgba(255, 255, 255, 0.6); */
   backdrop-filter: blur(10px);
 
   padding: 0.7rem 2.5rem;

@@ -1,9 +1,8 @@
 :root {
   --pink: #e27396;
   --light-pink: #ea9ab2;
-  --green: #337357;
-  --sage: #719f76;
-  --cream: #e4e3d3;
+  --purple: #84418a;
+  --cream: #fcde9c;
 }
 
 /* ================= GENERAL ================= */
@@ -12,23 +11,45 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   margin: 0;
   background-image: url(assets/39757960_8725442.jpg);
   background-size: cover;
   color: var(--green);
   font-family: Arial, Helvetica, sans-serif;
+} */
+body {
+  margin: 0;
+  color: var(--cream);
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+#backgroundCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.navbar,
+main,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 /* ================= NAVBAR ================= */
 
 .navbar {
-  background-color: var(--green);
+  background-color: var(--cream);
   padding: 18px 0;
 }
 
 .logo {
-  color: white;
+  color: var(--purple);
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 700;
@@ -39,9 +60,9 @@ body {
 }
 
 .help-btn {
-  border: 2px solid white;
-  background: transparent;
-  color: white;
+  border: 2px solid var(--pink);
+  background-color: var(--purple);
+  color: var(--pink);
   padding: 8px 18px;
   border-radius: 25px;
   font-weight: 600;
@@ -49,8 +70,8 @@ body {
 }
 
 .help-btn:hover {
-  background-color: white;
-  color: var(--green);
+  background: transparent;
+  color: var(--pink);
 }
 
 /* ================= HERO ================= */
@@ -66,8 +87,43 @@ body {
 }
 
 .game-emoji {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.game-emoji span {
+  font-size: 3.5rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Different timing for each emoji */
+.game-emoji span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.game-emoji span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.game-emoji span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .hero h1 {
@@ -83,9 +139,10 @@ body {
 
 .choose-text {
   display: inline-block;
-  background-color: var(--light-pink);
-  color: var(--green);
-  padding: 10px 22px;
+  background: var(--cream);
+
+  color: var(--purple);
+  padding: 6px 14px;
   border-radius: 25px;
   font-weight: 700;
 }
@@ -97,10 +154,10 @@ body {
   padding: 35px 25px;
   text-align: center;
 
-  background-color: white;
+  background-color: var(--cream);
 
   border-radius: 25px;
-
+  color: var(--pink);
   border: 3px solid transparent;
 
   box-shadow: 0 8px 20px rgba(51, 115, 87, 0.12);
@@ -155,7 +212,7 @@ body {
 .difficulty {
   display: inline-block;
 
-  background-color: var(--cream);
+  background-color: white;
 
   padding: 6px 14px;
 
@@ -177,7 +234,12 @@ body {
 
   border: none;
 
-  background-color: var(--green);
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--pink),
+    var(--purple)
+  );
 
   color: white;
 
@@ -201,9 +263,9 @@ body {
 /* ================= FOOTER ================= */
 
 footer {
-  background-color: var(--green);
+  background-color: var(--cream);
 
-  color: white;
+  color: var(--purple);
 
   text-align: center;
 
@@ -225,7 +287,7 @@ footer p {
 }
 
 .help-modal .modal-header {
-  background-color: var(--green);
+  background-color: var(--pink);
   color: white;
 }
 
@@ -247,7 +309,7 @@ footer p {
 }
 
 .help-item strong {
-  color: var(--green);
+  color: var(--pink);
   font-size: 1rem;
 }
 
@@ -329,7 +391,7 @@ footer p {
 /* Modal header */
 
 .name-modal-container .modal-header {
-  background-color: var(--green);
+  background-color: var(--pink);
 
   color: white;
 
@@ -341,7 +403,7 @@ footer p {
 }
 
 .modal-subtitle {
-  color: var(--light-pink);
+  color: white;
 
   margin-top: 5px;
 }
@@ -365,7 +427,7 @@ footer p {
 }
 
 .name-input:focus {
-  border-color: var(--green);
+  border-color: var(--pink);
 
   box-shadow: 0 0 0 3px rgba(51, 115, 87, 0.15);
 }
@@ -393,7 +455,7 @@ footer p {
 .start-btn {
   background-color: var(--pink);
 
-  color: white;
+  color: var(--cream);
 
   border: none;
 
@@ -407,9 +469,9 @@ footer p {
 }
 
 .start-btn:hover {
-  background-color: var(--green);
+  background-color: var(--cream);
 
-  color: white;
+  color: var(--pink);
 }
 /* ================= RESPONSIVE ================= */
 
@@ -439,7 +501,7 @@ footer p {
 }
 
 .game-header {
-  background-color: var(--green);
+  background-color: var(--pink);
   padding: 30px 0;
   width: 100%;
   flex-shrink: 0;
@@ -464,8 +526,8 @@ footer p {
 }
 
 .header-btn {
-  background-color: white;
-  color: var(--green);
+  background-color: var(--purple);
+  color: var(--cream);
   border: none;
   padding: 10px 24px;
   border-radius: 12px;
@@ -488,7 +550,9 @@ footer p {
 }
 
 .game-body-section {
-  background-color: var(--cream);
+  /* background-color: var(--cream); */
+  background-image: url(assets/guessbg.webp);
+  background-size: cover;
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -508,7 +572,7 @@ footer p {
 
 .game-center-box {
   background-color: white;
-  color: var(--green);
+  color: var(--purple);
   border: 4px solid var(--pink);
   border-radius: 20px;
   font-size: 2.2rem;
@@ -536,7 +600,7 @@ footer p {
   cursor: pointer;
   font-size: 3rem;
   font-weight: 800;
-  color: var(--green);
+  color: var(--pink);
   display: flex;
   justify-content: center;
   align-items: center;
